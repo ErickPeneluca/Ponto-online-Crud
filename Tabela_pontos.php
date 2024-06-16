@@ -1,3 +1,6 @@
+<?php
+  require "./Config.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,26 +27,29 @@
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Data</th>
-      <th scope="col">Hr Inicio</th>
-      <th scope="col">Hr Final</th>
+      <th scope="col">Horário de Inicio</th>
+      <th scope="col">Horário de Término</th>
     </tr>
   </thead>
   <tbody>
-      <tr>
-    <?php
-    require "./Config.php";
+  <?php
 
-    $query = "SELECT * FROM horarios";
-    $pdo->prepare($query)->execute();
-    
-    echo $pdo;
-    
-      echo "<th scope="."row".">1</th>"; 
-      echo "<td>Larry the Bird</td>";
-      echo "<td>@twitter</td>";
-      echo "<td>Loremlorme</td>";
-      ?>
-    </tr>
+$query = "SELECT * FROM horarios";
+$database = $pdo->prepare($query);
+$database->execute();
+
+$resultado = $database->fetchAll();
+
+foreach ($resultado as $x) {
+      echo "<tr>";
+      echo "<th scope="."row".">{$x[0]}</th>"; 
+      echo "<td>{$x[1]}</td>";
+      echo "<td>{$x[2]}</td>";
+      echo "<td>{$x[3]}</td>";
+      echo "</tr>";
+    }
+  ?>
+
   </tbody>
 </table>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
