@@ -1,6 +1,7 @@
 <?php
   require "./Config.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@
 <body>
 <ul class="nav bg-primary">
   <li class="nav-item">
-    <a class="nav-link active text-light" aria-current="page" href="#">Bater Ponto</a>
+    <a class="nav-link active text-light" aria-current="page" href="./index.html">Bater Ponto</a>
   </li>
   <li class="nav-item">
     <a class="nav-link text-light" href="#">Histórico de Pontos</a>
