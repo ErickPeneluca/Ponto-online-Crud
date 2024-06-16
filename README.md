@@ -29,3 +29,14 @@ INSERT INTO horarios (Data, Hr_inicio, Hr_final) VALUES
 ('2024-06-16', '09:00', '11:00'),
 ('2024-06-17', '10:00', '12:00');
 ```
+
+### Config.php
+```
+<?php
+$db_name = "horario_db"; 
+$db_host = "localhost";
+$db_user = "root";   // alterar usuario
+$db_password = $db_user; // alterar senha
+
+$pdo = new PDO("mysql:dbname={$db_name};host={$db_host}", "{$db_user}", "{$db_password}");
+```
