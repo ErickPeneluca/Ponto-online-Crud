@@ -4,3 +4,4 @@
 - Bootstrap 5.3.3
 - Php
 - MySQL
+- Composer
