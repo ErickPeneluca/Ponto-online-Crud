@@ -30,7 +30,14 @@
   </thead>
   <tbody>
       <tr>
-    <?php 
+    <?php
+    require "./Config.php";
+
+    $query = "SELECT * FROM horarios";
+    $pdo->prepare($query)->execute();
+    
+    echo $pdo;
+    
       echo "<th scope="."row".">1</th>"; 
       echo "<td>Larry the Bird</td>";
       echo "<td>@twitter</td>";
