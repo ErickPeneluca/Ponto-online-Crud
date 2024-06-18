@@ -5,7 +5,8 @@
 - Php
 - MySQL
 - Composer
-
+- Javascript
+  
 # Script DataBase
 ```
 -- Criação do banco de dados
