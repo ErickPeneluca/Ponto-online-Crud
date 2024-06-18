@@ -23,4 +23,4 @@ if ( dia <= 9 && mes <= 9) {
     dataFormatada = ano + `-` + mes + `-` + dia;
 }
 
-window.document.getElementById("data").innerHTML = dataFormatada;
+window.document.getElementById("Data").value = dataFormatada;
