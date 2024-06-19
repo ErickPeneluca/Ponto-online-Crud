@@ -22,6 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = $dataErr;
     }
 
+    
+
     if (empty($inicio)) {
         $errors[] = "Requerido a hora de Inicio";
     }
