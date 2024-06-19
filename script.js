@@ -24,3 +24,28 @@ if ( dia <= 9 && mes <= 9) {
 }
 
 window.document.getElementById("Data").value = dataFormatada;
+
+// CONSERTAR EXIBICAO DADOS EM TEMPO REAL
+
+let inputData = window.document.getElementById("Data");
+let inputInicio = window.document.getElementById("Inicio");
+let inputTermino = window.document.getElementById("Termino");
+
+inputData.addEventListener("input", function () {
+    var inputValue = inputData.value;
+
+    // Remove todos os caracteres que não são números
+    var cleanedValue = inputValue.replace(/\D/g, '');
+
+    // Limita o número de caracteres para o dia (DD) a no máximo 2
+    cleanedValue = cleanedValue.substring(0, 8);
+
+    // Formata a data no formato YYYY-MM-DD
+    var formattedValue = cleanedValue.replace(/(\d{4})(\d{2})?(\d{0,2})?/, function(match, p1, p2, p3) {
+        var formattedDate = p1 + (p2 ? '-' + p2 : '') + (p3 ? '-' + p3 : '');
+        return formattedDate;
+    });
+
+    // Atualiza o valor do campo de entrada com a data formatada
+    inputData.value = formattedValue;
+});

@@ -40,13 +40,16 @@ $database = $pdo->prepare($query);
 $database->execute();
 
 $resultado = $database->fetchAll();
-
 foreach ($resultado as $x) {
+  $novaHI = substr($x[2],0,-3);
+  $novaHF = substr($x[3],0,-3);
+  $novoX = str_replace("-","/",$x[1]);
+  
       echo "<tr>";
       echo "<th scope="."row".">{$x[0]}</th>"; 
-      echo "<td>{$x[1]}</td>";
-      echo "<td>{$x[2]}</td>";
-      echo "<td>{$x[3]}</td>";
+      echo "<td>{$novoX}</td>";
+      echo "<td>{$novaHI}</td>";
+      echo "<td>{$novaHF}</td>";
       echo "</tr>";
     }
   ?>
