@@ -23,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     
-
     if (empty($inicio)) {
         $errors[] = "Requerido a hora de Inicio";
     }
