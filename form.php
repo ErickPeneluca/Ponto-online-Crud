@@ -36,7 +36,7 @@
     <div class="container-sm">
         <form action="CadastrarPonto.php" method="post">
             <label for="Data" class="form-label">Data</label>
-            <input type="text"  name="data" class="form-control" placeholder="YYYY-MM-DD">
+            <input type="text"  name="data" class="form-control" id="Data" placeholder="YYYY-MM-DD">
             
             <label for="HoraInicio" class="form-label">Hora de início</label>
             <input type="time"  name="inicio" class="form-control" placeholder="HH:MM">
@@ -48,5 +48,6 @@
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

@@ -10,14 +10,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $inicio = $_POST['inicio'];
     $termino = $_POST['termino'];
 
+    $dataErr = "";
+
     if (empty($data)) {
         $errors[] = "Data é necessária!";
+        
     }
+
+    if (!preg_match("/^\d{4}-\d{2}-\d{2}$/", $data)) {
+        $dataErr = "Data inválida. Use o formato yyyy-mm-dd";
+        $errors[] = $dataErr;
+    }
+
     if (empty($inicio)) {
-        $errors[] = "Requerido a data de Inicio";
+        $errors[] = "Requerido a hora de Inicio";
     }
     if (empty($termino)) {
-        $errors[] = "Requerido a data do termino";
+        $errors[] = "Requerido a hora do termino";
     }
 
     if (!empty($errors)) {
