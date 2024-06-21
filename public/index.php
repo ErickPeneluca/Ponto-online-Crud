@@ -1,5 +1,5 @@
 <?php
-  require "./Config.php";
+  require './includes/Config.php';
 ?>
 
 <!DOCTYPE html>
